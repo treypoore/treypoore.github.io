@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Trey Poore</title>
+<meta name="description" content="Case studies and live code for Trey Poore's projects: a Make.com meeting automation, the Evergreen hackathon app, and an NBA player consistency model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0b0c'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>T</text></svg>">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a class="brand" href="index.html">TREY<span>POORE</span></a>
+    <ul>
+      <li><a class="link" href="index.html">Home</a></li>
+      <li><a class="link active" href="projects.html">Projects</a></li>
+      <li><a class="link" href="resume.html">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="container">
+    <div class="eyebrow">Projects</div>
+    <h1>Built, shipped, and documented.</h1>
+    <p>Each project below includes the problem, the architecture, the results, and a live code viewer that pulls files directly from the GitHub repository.</p>
+    <div class="actions">
+      <a class="btn btn-ghost" href="#meeting-workflow">Meeting Workflow</a>
+      <a class="btn btn-ghost" href="#evergreen">Evergreen</a>
+      <a class="btn btn-ghost" href="#nba-consistency">NBA Consistency</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ A. Meeting Workflow ============ -->
+<article class="project" id="meeting-workflow">
+  <div class="container">
+    <div class="project-top">
+      <div class="reveal">
+        <span class="badge">Automation · Make.com</span>
+        <h2>Meeting &amp; Reporting Workflow</h2>
+        <p class="summary">An end-to-end reporting automation for a McDonald's franchise organization that turns raw weekly performance data and meeting transcriptions into a presentation-ready deck, with no manual work.</p>
+        <div class="metrics">
+          <div class="metric"><div class="n">98%</div><div class="l">Less time per weekly report</div></div>
+          <div class="metric"><div class="n">180 hrs</div><div class="l">Saved per year (est.)</div></div>
+          <div class="metric"><div class="n">3 min</div><div class="l">Down from 3–4 hours</div></div>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-dark" href="https://github.com/treypoore/make-meeting-automation" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+      <div class="kv reveal">
+        <div><h4>Problem</h4><p>Leadership spent 3–4 hours every week pulling store-level metrics, building charts, and writing up meeting notes by hand.</p></div>
+        <div><h4>Architecture</h4><p>The pipeline pulls metrics for each restaurant location across seven categories (breakfast, lunch, dinner, labor, food, digital, and voice), generates 16 charts, and assembles them into a formatted presentation using live data references. The same workflow transcribes leadership meetings and sends the summaries to a database.</p>
+          <div class="flow"><span>Google Drive</span><i>→</i><span>AssemblyAI</span><i>→</i><span>Claude Sonnet 4.6</span><i>→</i><span>Google Sheets</span><i>→</i><span>QuickChart API</span><i>→</i><span>Gamma</span><i>→</i><span>Notion</span></div></div>
+        <div><h4>Result</h4><p>With senior leadership's approval, the system cut a 3–4 hour weekly manual process to about 3 minutes. End-to-end testing produced a complete 16-chart weekly deck from real store-level data.</p></div>
+        <div><h4>Tools</h4><div class="chips"><span class="chip">Make.com</span><span class="chip">Google Drive</span><span class="chip">AssemblyAI</span><span class="chip">Claude Sonnet 4.6</span><span class="chip">Google Sheets</span><span class="chip">QuickChart API</span><span class="chip">Gamma</span><span class="chip">Notion</span></div></div>
+      </div>
+    </div>
+
+    <div class="viewer reveal" data-repo="treypoore/make-meeting-automation" data-branch="main" data-files="README.md,Blueprint/01-drive-to-assemblyai.blueprint.json,Blueprint/02-assemblyai-to-notion.blueprint.json">
+      <div class="viewer-bar">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="repo-name"><a href="https://github.com/treypoore/make-meeting-automation" target="_blank" rel="noopener">treypoore/make-meeting-automation</a></div>
+      </div>
+      <div class="tabs"></div>
+      <div class="code-wrap"><div class="viewer-msg">Loading from GitHub…</div></div>
+      <div class="viewer-foot"><span class="meta">Live from GitHub</span><a href="https://github.com/treypoore/make-meeting-automation" target="_blank" rel="noopener">Open repository ↗</a></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ B. Evergreen ============ -->
+<article class="project alt" id="evergreen">
+  <div class="container">
+    <div class="project-top">
+      <div class="reveal">
+        <span class="badge">🏆 Top 10 · Gloo AI Hackathon 2026</span>
+        <h2>Evergreen</h2>
+        <p class="summary">A large-print iPad app that brings hymns, Scripture, and prayer to older adults in memory care. Used together with an aide, with no accounts and nothing to set up.</p>
+        <div class="metrics">
+          <div class="metric"><div class="n">Top 10</div><div class="l">Gloo AI Hackathon 2026, Denver</div></div>
+          <div class="metric"><div class="n">99%+</div><div class="l">Hymns with synced lyrics</div></div>
+          <div class="metric"><div class="n">$0</div><div class="l">Hosting cost</div></div>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-dark" href="https://github.com/JohnPClark27/evergreen" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <a class="btn btn-outline" href="https://evergreen-ai.pages.dev/" target="_blank" rel="noopener">Live demo ↗</a>
+        </div>
+      </div>
+      <div class="kv reveal">
+        <div><h4>My role</h4><p>Led idea creation, marketing research, coding translation between the technical and non-technical sides of the team, and the final pitch to judges.</p></div>
+        <div><h4>Problem</h4><p>Residents living with memory loss grew up singing hymns, but today's Bible apps have small text, busy screens, sign-ins, and streaks. The aide who would sit with them has minutes, not time to prepare a devotion.</p></div>
+        <div><h4>Architecture</h4><p>A static iPad app on Cloudflare Pages reads published content from Supabase (Postgres with row-level security). Scripture is fetched live from the YouVersion API through an edge function, and Gloo AI curates, but never writes, religious content.</p>
+          <div class="flow"><span>Gloo AI Studio</span><i>→</i><span>Supabase</span><i>→</i><span>Cloudflare Pages</span><i>→</i><span>YouVersion API</span></div></div>
+        <div><h4>Result</h4><p>Finished top 10 at the Gloo AI Hackathon 2026. Passes WCAG 2.2 AA accessibility checks and runs at zero hosting cost. Built with teammates JP Clark and Clark Cully.</p></div>
+      </div>
+    </div>
+
+    <div class="viewer reveal" data-repo="JohnPClark27/evergreen" data-branch="main" data-files="README.md,supabase/functions/curate/index.ts,web/js/app.js,pipeline/build_timings.py,DESIGN.md">
+      <div class="viewer-bar">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="repo-name"><a href="https://github.com/JohnPClark27/evergreen" target="_blank" rel="noopener">JohnPClark27/evergreen</a></div>
+      </div>
+      <div class="tabs"></div>
+      <div class="code-wrap"><div class="viewer-msg">Loading from GitHub…</div></div>
+      <div class="viewer-foot"><span class="meta">Live from GitHub</span><a href="https://github.com/JohnPClark27/evergreen" target="_blank" rel="noopener">Open repository ↗</a></div>
+    </div>
+  </div>
+</article>
+
+<!-- ============ C. NBA Consistency Model ============ -->
+<article class="project" id="nba-consistency">
+  <div class="container">
+    <div class="project-top">
+      <div class="reveal">
+        <span class="badge">Predictive Analytics · Python</span>
+        <h2>NBA Player Consistency Model</h2>
+        <p class="summary">An automated predictive analytics system that measures how consistently NBA players perform, so their outcomes can be predicted more reliably.</p>
+        <div class="metrics">
+          <div class="metric"><div class="n">1M+</div><div class="l">Historical data points</div></div>
+          <div class="metric"><div class="n">Daily</div><div class="l">Scheduled ingestion &amp; scoring</div></div>
+          <div class="metric"><div class="n">0</div><div class="l">Manual stat tracking remaining</div></div>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-dark" href="https://github.com/treypoore/nba-player-consistency" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+      <div class="kv reveal">
+        <div><h4>Problem</h4><p>Raw box scores say what a player did, not how reliably they do it. Daily stat tracking was manual and inconsistent.</p></div>
+        <div><h4>Architecture</h4><p>A scheduled daily pipeline (<code>daily_ingestion.py</code>, orchestrated by a <code>daily_run.yml</code> workflow) pulls fresh game data, runs it through a Python scoring engine (<code>consistency_model.py</code>) using rolling coefficient of variation, standard deviation, and weighted averages, and stores ranked results in a Supabase database.</p>
+          <div class="flow"><span>Game data</span><i>→</i><span>daily_ingestion.py</span><i>→</i><span>consistency_model.py</span><i>→</i><span>Supabase</span></div></div>
+        <div><h4>Process</h4><p>Version-controlled on GitHub and built in VS Code. Used Claude Code to run a full codebase audit for inefficiencies in the calculations and the data flow.</p></div>
+        <div><h4>Tools</h4><div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">Supabase / PostgreSQL</span><span class="chip">GitHub Actions</span><span class="chip">VS Code</span><span class="chip">Claude Code</span></div></div>
+      </div>
+    </div>
+
+    <div class="viewer reveal" data-repo="treypoore/nba-player-consistency" data-branch="main" data-files="README.md,consistency_model.py,daily_ingestion.py,.github/workflows/daily_run.yml,config_example.py">
+      <div class="viewer-bar">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="repo-name"><a href="https://github.com/treypoore/nba-player-consistency" target="_blank" rel="noopener">treypoore/nba-player-consistency</a></div>
+      </div>
+      <div class="tabs"></div>
+      <div class="code-wrap"><div class="viewer-msg">Loading from GitHub…</div></div>
+      <div class="viewer-foot"><span class="meta">Live from GitHub</span><a href="https://github.com/treypoore/nba-player-consistency" target="_blank" rel="noopener">Open repository ↗</a></div>
+    </div>
+  </div>
+</article>
+
+<section class="cta">
+  <div class="container reveal">
+    <div class="eyebrow">More</div>
+    <h2>Want the full picture?</h2>
+    <p>Additional projects, including an AI job-search pipeline and a recommendation engine, are on the resume.</p>
+    <div class="actions">
+      <a class="btn btn-light" href="resume.html">View resume</a>
+      <a class="btn btn-ghost" href="https://github.com/treypoore" target="_blank" rel="noopener">All repositories ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 James (Trey) Poore · Fishers, Indiana</div>
+    <div class="social">
+      <a href="https://github.com/treypoore" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/trey-poore" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:Poore.trey@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
